@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app/scss/style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: hsl(225, 20%, 60%); 
+                   margin-top: 2rem; margin-bottom: 1rem; }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
+  </style>
+
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__image">  
+
+          <div class="hero__text container--pall">
+            <h1>
+              Simple, traffic-based pricing
+            </h1>
+            <p>
+              Sign-up for our 30-day trial. No credit card required. 
+            </p>
+          </div>
+       
+      
+          <div class="main container--px">
+
+            <div class="main__panel">
+
+              <div class="main__grid">
+
+               <div class="main__pageviews">
+                 <p><span id="views"></span>&nbsp;&nbsp;PAGEVIEWS</p>
+               </div>
+               
+             
+               <div class="slider slidecontainer">
+                 <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+               </div>
+             
+                <div class="main__billingbottom">
+                  <p><span id="permonth" class="main__billing"></span>&nbsp;/month</p>   
+                </div>
+
+              </div>
+
+                <div class="main__billing main__subscription">
+
+                  <h1 class="main__margin">Monthly Billing</h1>
+                  
+                  <label class="switch main__margin">
+                    <input type="checkbox" id="pill">
+                    <span class="slide round"></span>
+                  </label>
+                  
+                  <h1 class="main__margin">Yearly Billing</h1>
+                  <button href="#" class="main pillbutton">25% discount</button>
+                </div>
+
+                  <hr class="newhr">
+                  <div class="main__secondGrid">
+                    <div class="main__items">
+                  
+                      <div class="main__item"> 
+                        <img class="main__images" src="/images/icon-check.svg" alt="check"/>
+                        <div class="main__description">Unlimited sites</div>
+                      </div>
+                    
+                      <div class="main__item"> 
+                        <img class="main__images" src="/images/icon-check.svg" alt="check"/>
+                        <div class="main__description">100% Data ownership</div>
+                      </div>
+                      <div class="main__item">
+                        <img class="main__images" src="/images/icon-check.svg" alt="check"/>
+                        <div class="main__description">Email reports</div>
+                      </div>
+                    
+                    </div>
+
+                      <div class="flex flex-jc-c">
+                        <button class="bigbutton">Start my trial</button>
+                      </div>
+                  </div>
+
+                  <div class="attribution">
+                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                    Coded by <a href="https://github.com/slava-sapir" >Slava Sapir</a>.
+                  </div>
+
+            </div>
+
+          </div>
+      </div>
+    </div>      
+
+  </section>
+
+
+  
+  
+  <script src="/app/js/script.js"></script>
+</body>
+</html>

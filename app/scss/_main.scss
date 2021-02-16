@@ -1,0 +1,171 @@
+.main {
+
+    &__panel {
+        border-radius: 0.375rem;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    &__grid {
+      @include breakpoint-up(large) {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3,1fr);
+      }  
+    }
+
+    &__secondGrid {
+      @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }  
+
+    }
+
+    &__pageviews {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-left: 7.5rem;
+        text-transform: uppercase;
+    
+      
+      @include breakpoint-up(large){
+         margin-left: 6rem;
+         margin-right: 4rem;
+         grid-row: 1;
+       }
+    }
+
+    &__billing {
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 1.15;
+        color: hsl(227, 35%, 25%);
+    }
+
+    &__billingbottom {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: 8rem;
+        margin-right: 10rem;
+
+       @include breakpoint-up(large) {
+
+        grid-column: 2/4;
+        grid-row: 1;    
+        margin-top: 2rem;
+        margin-left: 4rem;
+        padding-right: 3rem;
+      }
+    }
+
+
+    &__images {
+        height: 10px;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+    }
+
+    &__subscription {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem; 
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+      
+       @include breakpoint-up(large){
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    &__description {
+        font-size: 0.675rem;
+        font-weight: 600;
+        color: hsl(225, 20%, 60%);
+        font-family: 'Manrope', sans-serif;
+      }
+
+    &__margin {
+        margin-right: 10px;
+      }
+
+    &__item {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+
+        @include breakpoint-up(large) {
+          margin-left: 3rem;
+          justify-content: flex-start;
+        }
+      }
+
+    &__items {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem; 
+
+        @include breakpoint-up(large) {
+          grid-column: 1 / 1;
+        }
+    }
+
+    button, .bigbutton {
+        background-color: hsl(227, 35%, 25%);
+        border: none;
+        color:  hsl(226, 100%, 87%);
+        font-size: 0.675rem;
+        font-weight: 600;
+        padding: 3px 7px;
+        width: 140px;
+        height: 35px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 20px;
+        margin-top: 0.75rem;
+        margin-bottom: 1.6rem;
+        opacity: 0.75;
+
+      &:hover {
+        color: $white;
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      @include breakpoint-up(large) {
+        grid-column: 2 / 2;
+        align-items: center;
+        margin-top: 2.5rem;
+      }
+    }
+
+    button, .pillbutton {
+        background-color: hsl(14, 92%, 95%);
+        border: none;
+        color:  hsl(15, 100%, 70%);
+        font-size: 0.6rem;
+        font-weight: 600;
+        padding: 3px 2px 2px 3px;
+        width: 80px;
+        height: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 5px;
+        border-radius: 14px;
+        opacity: 0.75;
+
+        &:hover {
+          color: hsl(15, 100%, 70%);
+          opacity: 1;
+          cursor: pointer;
+        }
+    }
+
+
+}
+
