@@ -1,8 +1,9 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 45px;
-    height: 25px;
+    width: 38px;
+    height: 19px;
+    margin-top: 5px;
   }
   
   .switch input { 
@@ -18,7 +19,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsl(223, 50%, 87%);
+    background-color: $lightGrayishBlue;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -26,21 +27,22 @@
   .slide:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 13px;
+    width: 13px;
     left: 2px;
-    bottom: 2px;
-    background-color: white;
+    right: 2px;
+    bottom: 3px;
+    background-color: $white;
     -webkit-transition: .4s;
     transition: .4s;
   }
   
   input:checked + .slide {
-    background-color: hsl(15, 100%, 70%);
+    background-color: $strongCyan;
   }
   
   input:focus + .slide {
-    box-shadow: 0 0 1px hsl(15, 100%, 70%);
+    box-shadow: 0 0 1px $lightGrayishBlue;
   }
   
   input:checked + .slide:before {

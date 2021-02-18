@@ -1,39 +1,55 @@
 const slider = document.getElementById('myRange');
 const views = document.getElementById('views');
 const permonth = document.getElementById('permonth');
-
-const settings={
+const arr = [[0, 0], [1, 8], [5, 12], [10, 16], [50, 24], [100, 36]];
+const discount = 25;
+const settings = {
   fill: 'hsl(174, 77%, 80%)',
   background: 'hsl(224, 65%, 95%)'
 }
 
 slider.oninput = function() {
-  
+  let flag = 0;
   if (!document.getElementById('pill').checked) {
-    if(this.value === '0') { permonth.innerHTML = ''; views.innerHTML = '';}
-    if(this.value === '1') { permonth.innerHTML = (8).toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
-      }); views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '5') { permonth.innerHTML = '$12.00'; views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '10') { permonth.innerHTML = '$16.00'; views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '50') { permonth.innerHTML = '$24.00'; views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '100') { permonth.innerHTML = '$36.00'; views.innerHTML = '1M';}
+    flag = 0;
+    pillChecked(arr, this.value, flag);
   }
   else {
-    if(this.value === '0') { permonth.innerHTML = ''; views.innerHTML = '';}
-    if(this.value === '1') { permonth.innerHTML = (8).toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
-      }); views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '5') { permonth.innerHTML = '$9.6'; views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '10') { permonth.innerHTML = '$12.8'; views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '50') { permonth.innerHTML = '$19.2'; views.innerHTML = 10*this.value + 'K';}
-    if(this.value === '100') { permonth.innerHTML = '$28.8'; views.innerHTML = '1M';}
+    flag = 1;
+    pillChecked(arr, this.value, flag);  
   }
 
   const percentage = 100*(slider.value-slider.min)/(slider.max-slider.min);
   slider.style.background = `linear-gradient(90deg, ${settings.fill} ${percentage}%,
      ${settings.background} ${percentage + 0.1}%)`;
   
+}
+
+function calculateViews (value) {
+  if(value === '0') { 
+    return '';
+  } else if (value === '100') {
+    return '1M';
+  } else return 10*value + 'K';
+}
+
+function calculatePrice (value, flag) {
+  if(!flag && value !== 0) {
+    return (value).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  } else {
+     if (value !== 0) {
+      return (value - (value/100) * discount).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+     } else return '';
+  }
+}
+
+function pillChecked(arr, value, flag) {
+  for( var i= 0; i <= arr.length -1; i ++) {
+    let temp = arr[i];
+    if(value === temp[0].toString()) 
+    {
+      permonth.innerHTML = calculatePrice(temp[1], flag);
+      views.innerHTML = calculateViews(value);
+    }
+  }
 }

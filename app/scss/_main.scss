@@ -24,10 +24,10 @@
     }
 
     &__pageviews {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        margin-left: 7.5rem;
-        text-transform: uppercase;
+         margin-top: 2rem;
+         margin-bottom: 1rem;
+        // margin-left: 7.5rem;
+        // text-transform: uppercase;
     
       
       @include breakpoint-up(large){
@@ -45,18 +45,18 @@
     }
 
     &__billingbottom {
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
-        margin-left: 8rem;
-        margin-right: 10rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        // margin-left: 8rem;
+        // margin-right: 10rem;
 
        @include breakpoint-up(large) {
 
         grid-column: 2/4;
         grid-row: 1;    
         margin-top: 2rem;
-        margin-left: 4rem;
-        padding-right: 3rem;
+        // margin-left: 4rem;
+        // padding-right: 3rem;
       }
     }
 
@@ -68,16 +68,17 @@
     }
 
     &__subscription {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem; 
+        padding-left: 4rem;
+        padding-right: 1rem;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        margin-right: 3px;
         display: flex;
         justify-content: space-between;
       
        @include breakpoint-up(large){
-        display: flex;
         justify-content: flex-end;
+        margin-right: 2rem;
       }
     }
 
@@ -89,7 +90,7 @@
       }
 
     &__margin {
-        margin-right: 10px;
+        margin-right: 8px;
       }
 
     &__item {
@@ -143,18 +144,17 @@
       }
     }
 
-    button, .pillbutton {
+      .pillbuttonm { 
         background-color: hsl(14, 92%, 95%);
         border: none;
         color:  hsl(15, 100%, 70%);
         font-size: 0.6rem;
         font-weight: 600;
         padding: 3px 2px 2px 3px;
-        width: 80px;
-        height: 20px;
+        width: 37px;
+        height: 17px;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
         margin-top: 5px;
         border-radius: 14px;
         opacity: 0.75;
@@ -164,8 +164,42 @@
           opacity: 1;
           cursor: pointer;
         }
+
+        @include breakpoint-up(large) {
+         display: none;
+        }
+       
+    }
+   
+    .pillbuttond { 
+      @include breakpoint-up(large) {
+      background-color: hsl(14, 92%, 95%);
+      border: none;
+      color:  hsl(15, 100%, 70%);
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 3px 2px 2px 3px;
+      width: 72px;
+      height: 20px;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 5px;
+      border-radius: 14px;
+      opacity: 0.75;
+
+      &:hover {
+        color: hsl(15, 100%, 70%);
+        opacity: 1;
+        cursor: pointer;
+      }
+
     }
 
-
+    @include breakpoint-down(large) {
+      display: none;
+    }
+     
+  }
+ 
 }
 

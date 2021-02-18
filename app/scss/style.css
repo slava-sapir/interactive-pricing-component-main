@@ -27,7 +27,7 @@ body {
   .container {
     display: flex;
     align-items: center;
-    max-width: 100rem;
+    max-width: 90rem;
     margin: 0 auto;
   }
 }
@@ -104,7 +104,7 @@ body {
 
 h1 {
   font-size: 0.675rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #293356;
   line-height: 1.15;
   margin-bottom: 1.5rem;
@@ -112,10 +112,10 @@ h1 {
 }
 
 p {
-  font-size: 0.875rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #858fad;
-  line-height: 1.5;
   font-family: 'Manrope', sans-serif;
 }
 
@@ -227,8 +227,6 @@ hr.newhr {
 .main__pageviews {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  margin-left: 7.5rem;
-  text-transform: uppercase;
 }
 
 @media (min-width: 90rem) {
@@ -247,10 +245,8 @@ hr.newhr {
 }
 
 .main__billingbottom {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  margin-left: 8rem;
-  margin-right: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 90rem) {
@@ -258,8 +254,6 @@ hr.newhr {
     grid-column: 2/4;
     grid-row: 1;
     margin-top: 2rem;
-    margin-left: 4rem;
-    padding-right: 3rem;
   }
 }
 
@@ -270,18 +264,19 @@ hr.newhr {
 }
 
 .main__subscription {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 4rem;
+  padding-right: 1rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  margin-right: 3px;
   display: flex;
   justify-content: space-between;
 }
 
 @media (min-width: 90rem) {
   .main__subscription {
-    display: flex;
     justify-content: flex-end;
+    margin-right: 2rem;
   }
 }
 
@@ -293,7 +288,7 @@ hr.newhr {
 }
 
 .main__margin {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .main__item {
@@ -353,27 +348,61 @@ hr.newhr {
   }
 }
 
-.main button, .main .pillbutton {
+.main .pillbuttonm {
   background-color: #feece7;
   border: none;
   color: #ff8c66;
   font-size: 0.6rem;
   font-weight: 600;
   padding: 3px 2px 2px 3px;
-  width: 80px;
-  height: 20px;
+  width: 37px;
+  height: 17px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   margin-top: 5px;
   border-radius: 14px;
   opacity: 0.75;
 }
 
-.main button:hover, .main .pillbutton:hover {
+.main .pillbuttonm:hover {
   color: #ff8c66;
   opacity: 1;
   cursor: pointer;
+}
+
+@media (min-width: 90rem) {
+  .main .pillbuttonm {
+    display: none;
+  }
+}
+
+@media (min-width: 90rem) {
+  .main .pillbuttond {
+    background-color: #feece7;
+    border: none;
+    color: #ff8c66;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 3px 2px 2px 3px;
+    width: 72px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 5px;
+    border-radius: 14px;
+    opacity: 0.75;
+  }
+  .main .pillbuttond:hover {
+    color: #ff8c66;
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 89.9375rem) {
+  .main .pillbuttond {
+    display: none;
+  }
 }
 
 .slider .slidecontainer {
@@ -429,8 +458,9 @@ hr.newhr {
 .switch {
   position: relative;
   display: inline-block;
-  width: 45px;
-  height: 25px;
+  width: 38px;
+  height: 19px;
+  margin-top: 5px;
 }
 
 .switch input {
@@ -453,20 +483,21 @@ hr.newhr {
 .slide:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
+  height: 13px;
+  width: 13px;
   left: 2px;
-  bottom: 2px;
+  right: 2px;
+  bottom: 3px;
   background-color: white;
   transition: .4s;
 }
 
 input:checked + .slide {
-  background-color: #ff8c66;
+  background-color: #10d5c2;
 }
 
 input:focus + .slide {
-  box-shadow: 0 0 1px #ff8c66;
+  box-shadow: 0 0 1px #cdd7ee;
 }
 
 input:checked + .slide:before {

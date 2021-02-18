@@ -25,7 +25,7 @@ body {
         @include breakpoint-up(large){
             display: flex;
             align-items: center;
-            max-width: 100rem;
+            max-width: 90rem;
             margin: 0 auto;
         }
 
@@ -54,7 +54,6 @@ body {
         padding-right: 1.5rem;
 
         @include breakpoint-up(large) {
-           
             padding-right: 31rem;
             padding-left: 27rem;
             margin-top: 2.5rem;
@@ -100,7 +99,7 @@ body {
 
   h1 {
         font-size: 0.675rem;
-        font-weight: 800;
+        font-weight: 600;
         color: $darkDesaturatedBlue;
         line-height: 1.15;
         margin-bottom: 1.5rem;
@@ -108,13 +107,17 @@ body {
    }
    
 
- p {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: $grayishBlue;
-    line-height: 1.5; 
-    font-family: 'Manrope', sans-serif;
-}
+   p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $grayishBlue;
+        // font-size: 0.875rem;
+        // font-weight: 800;
+        // color: $grayishBlue;
+        // line-height: 1.5; 
+        font-family: 'Manrope', sans-serif;
+   }
 
 hr.newhr {
     border: 0.5px solid hsl(224, 65%, 95%);
